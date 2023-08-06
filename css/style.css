@@ -1,0 +1,126 @@
+:root{
+    --primary-color: #22223B;
+    --light-color: #4A4E69;
+    --lightest-color: #F2E9E4;
+    --secondary-color: #9A8C98;
+    --secondary-light: #C9ADA7;
+    
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: var(--lightest-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+button{
+    all: unset;
+    cursor: pointer;
+}
+.header{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+
+}
+#search-container{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.movie-name-wrapper{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    
+}
+.movie-year-wrapper{
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+
+.movie-year-wrapper > input{
+    width: 5rem;
+    padding: 0.3rem 0.2rem;
+}
+
+.movie-name-wrapper > input{
+    width: 100%;
+    padding: 0.3rem 0.2rem;
+}
+
+.movie-name-wrapper > input, .movie-year-wrapper > input{
+   margin: 0 0.5rem;
+   border-radius: 8px;
+   font-weight: bold;
+}
+.movie-year-wrapper > button{
+    border-radius: 8px;
+    width: 50px;
+    padding: 2px;
+    
+}
+#search-button{
+    all: unset;
+    padding: 0.3rem;
+    border: 2px solid var(--lightest-color);
+    border-radius: 10px;
+}
+#search-button:focus, #search-button:hover{
+    background-color: var(--light-color);
+}
+
+main{
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--lightest-color);
+    color: var(--primary-color);
+    flex-grow: 1; /* o flex grow como o main esta dentro do body que tem 100% da altura da tela o main expadira para completar o resto de espaço livre dentro do body*/
+}
+
+#movie-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+#movie-list article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#movie-list article > img{
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+.remove-list{
+    border: 2px solid var(--secondary-color);
+    padding: 0.3rem 0;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px #000;
+    transition: all 0.7s ease;
+
+}
+.remove-list:focus, .remove-list:hover{
+    background-color: var(--secondary-color);
+    color: var(--lightest-color);
+
+}

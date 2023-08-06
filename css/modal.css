@@ -1,0 +1,78 @@
+:root{
+    --primary-color: #22223B;
+    --light-color: #4A4E69;
+    --lightest-color: #F2E9E4;
+    --secondary-color: #9A8C98;
+    --secondary-light: #C9ADA7;
+}
+#model-overlay{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+
+}
+/*Classes overlay e open utilizadas para mostrar e esconder a modal*/
+.overlay{ /*Classe responsavel para esconder a modal*/
+    visibility: hidden;
+    transition: all 0.3s ease; /*seta para todas transições 3mile segundos e realiza a em modo suave*/
+    opacity: 0; /*Deixa a opacidade transparente*/
+}
+.open{/*Classe responsavel para mostrar a modal*/
+    visibility: visible;
+    opacity: 1; /*Deixa a opacidade visivel*/
+}
+
+#modal-background{
+    background-color: var(--light-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.7;
+}
+#modal-container{
+    z-index: 1;
+    background-color: var(--lightest-color);
+    padding: 1rem 3rem;
+    border-radius: 10px;
+
+}
+#movie-title{
+    display: flex;
+    padding: 1rem 0;
+}
+
+#modal-body{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+
+
+}
+#movie-poster{
+    border-radius: 10px;
+}
+#movie-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 300px;
+    padding-left: 2rem;
+}
+#add-to-list{
+    border: 2px solid var(--primary-color);
+    padding: 0.3rem 0;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px #000;
+}
+#add-to-list:focus, #add-to-list:hover{
+    background-color: var(--primary-color);
+    color: var(--lightest-color);
+}
